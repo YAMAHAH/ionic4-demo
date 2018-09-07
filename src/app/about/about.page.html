@@ -1,7 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>About</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>About</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="showToast()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <dx-data-grid id="gridContainer" [dataSource]="customers" [columns]="['CompanyName', 'City', 'State', 'Phone', 'Fax']" [showBorders]="true">
+    </dx-data-grid>
+</ion-content>
